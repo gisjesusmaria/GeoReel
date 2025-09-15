@@ -1,0 +1,59 @@
+{
+  "type": "categorized",
+  "attribute": "estado",
+  "categories": [
+    {
+      "value": "ADOQUINADO",
+      "style": {
+        "color": "#ffa200",
+        "weight": 2.5,
+        "opacity": 1
+      }
+    },
+    {
+      "value": "PAVIMENTO FLEXIBLE",
+      "style": {
+        "color": "#b3b8d0",
+        "weight": 2.5,
+        "opacity": 1
+      }
+    },
+    {
+      "value": "PAVIMENTO RIGIDO",
+      "style": {
+        "color": "#667a84",
+        "weight": 2.5,
+        "opacity": 1
+      }
+    },
+    {
+      "value": "RUTA NACIONAL",
+      "style": {
+        "color": "#e31a1c",
+        "weight": 3.5,
+        "opacity": 1
+      }
+    },
+    {
+      "value": "RUTA PROVINCIAL",
+      "style": {
+        "color": "#eb4a4d",
+        "weight": 2.5,
+        "opacity": 1
+      }
+    },
+    {
+      "value": "TIERRA",
+      "style": {
+        "color": "#a86616",
+        "weight": 2.5,
+        "opacity": 1
+      }
+    }
+  ],
+  "default": {
+    "color": "#8d5a99",
+    "weight": 1,
+    "opacity": 0.8
+  }
+}
