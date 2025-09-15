@@ -2,9 +2,10 @@
   "style": {
     "fillColor": "rgba(0,0,0,0)",
     "color": "#0000ff",
-    "weight": 0.9,
+    "weight": 1.1,
     "opacity": 1,
     "fillOpacity": 0.6
   }
 
 }
+
