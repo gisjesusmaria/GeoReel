@@ -1,0 +1,115 @@
+{
+  "type": "categorized",
+  "attribute": "sentido",
+  "categories": [
+    {
+      "value": 1,
+      "label": "Sentido Único",
+      "style": {
+        "color": "#1e90ff",
+        "weight": 3,
+        "opacity": 1,
+        "decorators": [
+          {
+            "symbol": "arrow-head",
+            "position": "end",
+            "size": 15,
+            "pattern": {
+              "offset": "100%",
+              "repeat": 0,
+              "symbol": {
+                "path": "M 0,-5 L 10,0 L 0,5",
+                "pixelSize": 15,
+                "headAngle": 60,
+                "orient": true
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "value": 2,
+      "label": "Sentido Contrario",
+      "style": {
+        "color": "#ff4500",
+        "weight": 3,
+        "opacity": 1,
+        "decorators": [
+          {
+            "symbol": "arrow-head",
+            "position": "start",
+            "size": 15,
+            "pattern": {
+              "offset": "0%",
+              "repeat": 0,
+              "symbol": {
+                "path": "M 0,-5 L 10,0 L 0,5",
+                "pixelSize": 15,
+                "headAngle": 60,
+                "orient": true
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "value": 3,
+      "label": "Doble Mano",
+      "style": {
+        "color": "#32cd32",
+        "weight": 3,
+        "opacity": 1,
+        "decorators": [
+          {
+            "symbol": "arrow-head",
+            "position": "start",
+            "size": 15,
+            "pattern": {
+              "offset": "0%",
+              "repeat": 0,
+              "symbol": {
+                "path": "M 0,-5 L 10,0 L 0,5",
+                "pixelSize": 15,
+                "headAngle": 60,
+                "orient": true
+              }
+            }
+          },
+          {
+            "symbol": "arrow-head",
+            "position": "end",
+            "size": 15,
+            "pattern": {
+              "offset": "100%",
+              "repeat": 0,
+              "symbol": {
+                "path": "M 0,-5 L 10,0 L 0,5",
+                "pixelSize": 15,
+                "headAngle": 60,
+                "orient": true
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "value": "",
+      "label": "Sin especificar",
+      "style": {
+        "color": "#ff69b4",
+        "weight": 2,
+        "opacity": 0.8
+      }
+    }
+  ],
+  "default": {
+    "style": {
+      "color": "#808080",
+      "weight": 2,
+      "opacity": 0.8
+    }
+  }
+}
