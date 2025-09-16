@@ -1,0 +1,76 @@
+{
+  "type": "categorized",
+  "attribute": "sentido",
+  "categories": [
+    {
+      "value": 1,
+      "label": "Sentido Único",
+      "style": {
+        "color": "#0000ff",
+        "weight": 2.5,
+        "opacity": 1,
+        "decorators": [
+          {
+            "symbol": "arrow",
+            "position": "end",
+            "size": "8px"
+          }
+        ]
+      }
+    },
+    {
+      "value": 2,
+      "label": "Sentido Contrario",
+      "style": {
+        "color": "#101ff5",
+        "weight": 2.5,
+        "opacity": 1,
+        "decorators": [
+          {
+            "symbol": "arrow",
+            "position": "start",
+            "size": "8px"
+          }
+        ]
+      }
+    },
+    {
+      "value": 3,
+      "label": "Doble Mano",
+      "style": {
+        "color": "#e31a1c",
+        "weight": 2.5,
+        "opacity": 1,
+        "decorators": [
+          {
+            "symbol": "arrow",
+            "position": "start",
+            "size": "8px"
+          },
+          {
+            "symbol": "arrow",
+            "position": "end",
+            "size": "8px"
+          }
+        ]
+      }
+    },
+    {
+      "value": "",
+      "label": "Sin especificar",
+      "style": {
+        "color": "#e31a1c",
+        "weight": 1.5,
+        "opacity": 0.8
+      }
+    }
+  ],
+  "default": {
+    "style": {
+      "color": "#808080",
+      "weight": 1.5,
+      "opacity": 0.8
+    }
+  }
+}
+
