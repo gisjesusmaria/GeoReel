@@ -1,0 +1,285 @@
+/* --- Reseteo y Estilos Base --- */
+:root {
+    --primary-color: #3a7bd5;
+    --secondary-color: #3a6073;
+    --accent-color: #00d2ff;
+    --text-color: #f0f0f0;
+    --bg-card-color: rgba(255, 255, 255, 0.1);
+    --border-color: rgba(255, 255, 255, 0.2);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    /* --- CAMBIO CLAVE --- */
+    /* Permitimos el scroll vertical si el contenido es más alto que la pantalla */
+    overflow-x: hidden; /* Evitamos el scroll horizontal indeseado */
+}
+
+/* --- Pantalla de Selección --- */
+#selection-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* --- CAMBIO CLAVE --- */
+    /* Cambiamos height por min-height para que pueda crecer */
+    min-height: 100vh;
+    /* Usamos space-evenly para distribuir mejor el espacio verticalmente */
+    justify-content: space-evenly; 
+    padding: 2rem 1rem; /* Añadimos padding horizontal para móviles */
+    box-sizing: border-box;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+    opacity: 0.9;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h2 {
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* --- Carrusel --- */
+#carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+}
+
+#carousel-container {
+    display: flex;
+    /* --- CAMBIO CLAVE --- */
+    /* Hacemos que el scroll sea más suave y fácil en táctiles */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Para iOS */
+    width: 100%;
+    padding: 20px;
+    gap: 30px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    /* Añadimos un pequeño truco para que el primer y último item no queden pegados a los bordes */
+    scroll-padding: 0 20px; 
+}
+#carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.carousel-item {
+    min-width: 280px;
+    background: var(--bg-card-color);
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-item.selected {
+    border: 2px solid var(--accent-color);
+    transform: translateY(-5px) scale(1.02);
+}
+
+.carousel-item.selected::after {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px var(--accent-color);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.carousel-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.carousel-nav-btn {
+    background: var(--bg-card-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+    margin: 0 10px;
+    /* Ocultamos los botones en pantallas táctiles, el scroll es más natural */
+    display: none;
+}
+.carousel-nav-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* --- Botones --- */
+#buttons-container {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem; /* Añadimos margen inferior por si hay scroll */
+}
+
+#generate-map-btn {
+    background: linear-gradient(45deg, var(--accent-color), #0ab3e4);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4);
+}
+
+#generate-map-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 210, 255, 0.6);
+}
+
+#generate-map-btn:disabled {
+    background: #555;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* --- Contenedor del Mapa (sin cambios) --- */
+#map-container {
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    position: relative;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+#back-to-selection-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid var(--primary-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.leaflet-control-layers {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+}
+.leaflet-popup-content-wrapper {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    color: #333;
+    border-radius: 8px;
+}
+
+/* --- NUEVA SECCIÓN --- */
+/* Estilos para Dispositivos Móviles y Pantallas Medianas */
+
+/* Para pantallas de tablet y más grandes, mostramos los botones del carrusel */
+@media (min-width: 769px) {
+    .carousel-nav-btn {
+        display: block;
+    }
+}
+
+/* Para pantallas de celular */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    main h2 {
+        font-size: 1.2rem;
+    }
+    .carousel-item {
+        /* Hacemos las tarjetas un poco más pequeñas */
+        min-width: 220px; 
+    }
+}
