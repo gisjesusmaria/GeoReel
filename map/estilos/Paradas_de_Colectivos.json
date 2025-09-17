@@ -1,9 +1,10 @@
 {
   "style": {
-    "fillColor": "#d90c28",
+    "radius": 6,
+    "fillColor": "#8d5a99",
     "fillOpacity": 1,
-    "color": "#232323",
+    "color": "#000",
     "weight": 0,
-    "opacity": 0
+    "opacity": 1
   }
 }
