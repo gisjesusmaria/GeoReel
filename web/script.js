@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // { name: 'Gestion_de_Calles_Sentidos', label: 'Gestion de Calles Sentidos' },
         { name: 'Lineas_de_Ribera', label: 'Lineas de Ribera' },
         { name: 'Recorrido_Bus_Urbano', label: 'Recorrido Bus Urbano' },
+        { name: 'Paradas_de_Colectivos', label: 'Paradas de Colectivos' },
         { name: 'Reductores_de_Velocidad', label: 'Reductores de Velocidad' },
         { name: 'Reserva_Agua_Mansa', label: 'Reserva Agua Mansa' },
         { name: 'Reserva_Parque_del_Oeste', label: 'Reserva Parque del Oeste' }
@@ -256,4 +257,5 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Iniciar la aplicación
     renderCarousel();
+
 });
