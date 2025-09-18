@@ -212,7 +212,7 @@ main h2 {
 
 #back-to-selection-btn {
     position: absolute;
-    top: 20px;
+    top: 60px;
     left: 20px;
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.8);
@@ -282,4 +282,5 @@ main h2 {
         /* Hacemos las tarjetas un poco más pequeñas */
         min-width: 220px; 
     }
+
 }
