@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Ejido_Municipal', label: 'Ejido Municipal' },
         { name: 'Cordon_Cuneta', label: 'Cordon Cuneta' },
         { name: 'Gestion_de_Calles', label: 'Gestion de Calles' },
-        { name: 'Gestion_de_Calles_Sentidos', label: 'Gestion de Calles Sentidos' },
+        // { name: 'Gestion_de_Calles_Sentidos', label: 'Gestion de Calles Sentidos' },
         { name: 'Lineas_de_Ribera', label: 'Lineas de Ribera' },
         { name: 'Recorrido_Bus_Urbano', label: 'Recorrido Bus Urbano' },
         { name: 'Paradas_de_Colectivos', label: 'Paradas de Colectivos' },
@@ -194,4 +194,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     renderCarousel();
+
 });
